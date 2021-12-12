@@ -72,6 +72,30 @@ void Draw() {
 
 }
 
+void Input() {
+	keypad(stdscr, TRUE);
+	halfdelay(1);
+	int c = getch();
+	switch (getch()) {
+		case KEY_LEFT:
+			dir = LEFT;
+			break;
+		case KEY_RIGHT:
+			dir = RIGHT;
+			break;
+		case KEY_UP:
+			dir = UP;
+			break;
+		case KEY_DOWN:
+			dir = DOWN;
+			break;
+		case 'q':
+			gameOver = true;
+			break;;
+
+	}
+}
+
 
 
 int main() {
